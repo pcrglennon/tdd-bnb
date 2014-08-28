@@ -30,4 +30,14 @@ RSpec.describe City, :type => :model do
     expect(city.latitude).to_not be_nil
     expect(city.longitude).to_not be_nil
   end
+
+  describe '#properties' do
+
+    let(:properties) { 10.times.map { |i| FactoryGirl.create(:property, city: city) } }
+
+    it 'returns a list of all its properties' do
+      expect(city.properties).to eq(properties)
+    end
+
+  end
 end

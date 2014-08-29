@@ -8,6 +8,14 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt', '~> 3.1.7'
 gem 'unicorn'
 
+group :test do
+  gem 'sqlite3'
+end
+
+group :development, :production do
+  gem 'pg'
+end
+
 group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
@@ -15,13 +23,6 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'guard-rspec', require: false
+  gem 'spring-commands-rspec'
   gem 'pry'
-end
-
-group :test do
-  gem 'sqlite3'
-end
-
-group :development, :production do
-  gem 'pg'
 end

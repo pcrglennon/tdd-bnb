@@ -1,9 +1,9 @@
 # require 'rails_helper'
 
-# RSpec.describe "Properties", :type => :request do
-#   describe "GET /properties" do
+# RSpec.describe "Homes", :type => :request do
+#   describe "GET /homes" do
 #     it "works! (now write some real specs)" do
-#       get properties_path
+#       get homes_path
 #       expect(response.status).to be(200)
 #     end
 #   end

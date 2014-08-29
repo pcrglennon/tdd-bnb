@@ -14,12 +14,13 @@ RSpec.describe City, :type => :model do
     expect(city.errors.messages.keys).to include(:name)
   end
 
-  describe '#properties' do
+  describe '#homes' do
 
-    let(:city) { FactoryGirl.create :city_with_properties }
+    let(:city) { FactoryGirl.create :city_with_homes }
 
-    it 'returns a list of all its properties' do
-      expect(city.properties).to_not be_empty
+    it 'returns a list of all its homes' do
+      expect(city.homes).to_not be_empty
+      expect(city.homes.all? { |h| h.is_a?(Home) }).to be true
     end
 
   end

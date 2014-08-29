@@ -2,13 +2,13 @@ FactoryGirl.define do
   factory :city do
     name { Faker::Address.city }
 
-    factory :city_with_properties do
+    factory :city_with_homes do
       ignore do
-        properties_count 5
+        homes_count 5
       end
 
       after(:create) do |city, evaluator|
-        create_list(:property, evaluator.properties_count, city: city)
+        create_list(:home, evaluator.homes_count, city: city)
       end
     end
   end

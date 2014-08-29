@@ -1,6 +1,6 @@
 
 FactoryGirl.define do
-  factory :property do
+  factory :home do
     address do
       Faker::Address.street_address + ", " +
       Faker::Address.secondary_address + " " +

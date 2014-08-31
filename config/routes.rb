@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :listings
+
   resources :properties
 
   resources :cities

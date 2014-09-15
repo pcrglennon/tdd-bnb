@@ -53,6 +53,6 @@ class ListingsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def listing_params
-      params.require(:listing).permit(:start_date, :end_date)
+      params.require(:listing).permit(:home_id, :start_date, :end_date)
     end
 end

@@ -7,4 +7,16 @@ class Listing < ActiveRecord::Base
   def city
     self.home.city
   end
+
+  def expired?
+    self.end_date <= Date.today
+  end
+
+  def current?
+    self.start_date <= Date.today && self.end_date > Date.today
+  end
+
+  def upcoming?
+    self.start_date > Date.today
+  end
 end
